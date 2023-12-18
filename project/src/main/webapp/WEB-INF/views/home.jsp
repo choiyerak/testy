@@ -67,7 +67,7 @@
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">시설</a>
                             <div class="dropdown-menu rounded-0 m-0">
-                                <a href="property-list.html" class="dropdown-item">센터소개</a>
+                                <a href="center" class="dropdown-item">센터소개</a>
                                 <a href="property-type.html" class="dropdown-item">시설소개</a>
                                 <a href="property-agent.html" class="dropdown-item">강사소개</a>
                                 <a href="property-agent.html" class="dropdown-item">찾아오는 길</a>
@@ -243,13 +243,16 @@
 	                                    			<span>C언어 1기</span></a></th>
 	                                    		</a>
                                     		<td>접수전</td>
-                                    	 </tr>
+                                    	</tr>
                                     </table>
                                 </div>
-                           </div>
+                            </div>
+                           
                     </div>
                 </div>
+                
             </div>
+            
             </div>
             <!-- 내용 추가 예정  -->
             <div class="col-lg-4">

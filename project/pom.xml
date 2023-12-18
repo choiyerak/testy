@@ -9,11 +9,11 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>kr.co</groupId>
-	<artifactId>group</artifactId>
+	<artifactId>project</artifactId>
 	<version>ver 1.0</version>
 	<packaging>war</packaging>
-	<name>groupproject</name>
-	<description>SpringBoot_Vue.js_Project</description>
+	<name>project</name>
+	<description>SpringBoot_Vue.js Project</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -57,38 +57,60 @@
 			<version>3.0.3</version>
 			<scope>test</scope>
 		</dependency>
-		<!-- 사용자 추가 라이브러리(의존성) 시작 --> 
-		<!-- JSP 뷰페이지 관련 라이브러리 (jasper 검색) -->
-		<dependency>
-			<groupId>org.apache.tomcat.embed</groupId>
-			<artifactId>tomcat-embed-jasper</artifactId>
-			<version>10.1.15</version>
-		</dependency>
-		<!-- JSTL 뷰페이지 관련 라이브러리 (jstl 검색) -->
-		<dependency>
-		    <groupId>jakarta.servlet.jsp.jstl</groupId>
-		    <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
-		    <version>3.0.0</version>
-		</dependency>
 		
-		<dependency>
-		    <groupId>org.glassfish.web</groupId>
-		    <artifactId>jakarta.servlet.jsp.jstl</artifactId>
-		    <version>2.0.0</version>
-		</dependency>
-		<!-- json simple 라이브러리(json) -->
-		<dependency>
-			<groupId>com.googlecode.json-simple</groupId>
-			<artifactId>json-simple</artifactId>
-			<version>1.1.1</version>
-		</dependency>
-		<!-- 자바 웹메일 (mail 검색) -->
+		<!-- 사용자 추가 라이브러리(의존성)시작 -->
+		<!-- https://mvnrepository.com/ 에서 검색-->
+		
+		<!-- 자바 웹메일 라이브러리 (mail검색)-->
 		<dependency>
 			<groupId>javax.mail</groupId>
 			<artifactId>mail</artifactId>
 			<version>1.4.7</version>
 		</dependency>
-		<!-- 사용자 추가 라이브러리(의존성) 끝 -->
+		
+		<!-- json=simple 라이브러리 (json)-->
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+
+		<!-- JSP 관련 라이브러리(jsper 검색)-->
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<version>10.1.15</version>
+		</dependency>
+		
+		<!-- JSTL 관련 라이브러리 (jstl 검색)-->
+		<!-- 주의사항 : Tomcat 10에서는 에러남-->
+		<!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+
+
+		<!-- 파일업로드/다운로드 관련 라이브러리 (fileupload 검색)-->
+		<!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.5</version>
+		</dependency>
+
+		<!--서버 자동 재시작-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional> <!-- Restart를 원하지 않을 경우 false -->
+		</dependency>
+		
+
+		<!-- 사용자 추가 라이브러리(의존성)끝 -->
+		
+		
 	</dependencies>
 
 	<build>

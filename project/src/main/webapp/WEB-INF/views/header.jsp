@@ -36,6 +36,7 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+<<<<<<< HEAD
     
     <!-- datepicker -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
@@ -45,6 +46,8 @@
     <script src="js/modernizer.js"></script>
     
     <!-- <script src="../js/jquery.cookie.js"></script> -->
+=======
+>>>>>>> 9fae9e9ab730455853113bd4f26cad78c47a0e0a
 </head>
 <script src="js/modernizer.js"></script>
 <body>
@@ -76,7 +79,7 @@
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">시설</a>
                             <div class="dropdown-menu rounded-0 m-0">
-                                <a href="property-list.html" class="dropdown-item">센터소개</a>
+                                <a href="center" class="dropdown-item">센터소개</a>
                                 <a href="property-type.html" class="dropdown-item">시설소개</a>
                                 <a href="property-agent.html" class="dropdown-item">강사소개</a>
                                 <a href="property-agent.html" class="dropdown-item">찾아오는 길</a>

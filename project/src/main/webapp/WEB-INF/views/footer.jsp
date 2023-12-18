@@ -57,7 +57,6 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <script src="../js/join.js"></script>
 </body>
 
 </html>
