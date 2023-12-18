@@ -81,7 +81,7 @@ public class UserCont {
 		return json.toString();
 	} // idCheckCookieProc() end
 	*/
-	
+	 
 	// 회원 가입 페이지에서 회원등록 버튼을 누르면 정보가 db로 전달됨
 	@PostMapping("/join")
 	public ModelAndView join(@ModelAttribute UserDTO dto) {
