@@ -1,5 +1,6 @@
 package kr.co.group.user;
 
+<<<<<<< HEAD
 import java.util.Date;
 import java.util.List;
 import java.util.Properties;
@@ -12,14 +13,22 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 import org.json.simple.JSONObject;
+=======
+
+import java.util.List;
+
+>>>>>>> 59114d0c28a67bc88e76599c07e67d66141c0961
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+<<<<<<< HEAD
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
+=======
+>>>>>>> 59114d0c28a67bc88e76599c07e67d66141c0961
 import org.springframework.web.servlet.ModelAndView;
 
 import jakarta.servlet.http.Cookie;
@@ -28,6 +37,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import kr.co.group.utility.MyAuthenticator;
 import kr.co.group.utility.Utility;
+
 
 @Controller
 @SessionAttributes({"s_id"})
@@ -40,10 +50,27 @@ public class UserCont {
 	@Autowired
 	private UserDAO dao;
 	
-	// 회원 가입 페이지로 이동 
+	
+	// 로그인 페이지로 이동 : http://localhost:9095/login
+	@GetMapping("/login") // /WEB-INF/views/login.jsp
+	public ModelAndView login() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("login/login"); //
+		
+		return mav;
+	} // login() ends 
+	
+	@PostMapping("/login")
+	public String loginProc(HttpServletRequest req) {
+		String u_id = req.getParameter("u_id");
+		String u_pw = req.getParameter("u_pw");
+		UserDTO udto = new UserDTO();
+	} // loginProc() ends 
+	
+	// 회원 가입 페이지로 이동 : http://localhost:9095/join
 	@GetMapping("/join")
 	public String join() {
-		return "/login/joinForm";
+		return "login/joinForm";
 	} // join() ends 
 	
 	// 회원 가입 페이지에서 회원등록 버튼을 누르면 정보가 db로 전달됨
@@ -58,6 +85,7 @@ public class UserCont {
 			mav.setViewName("redirect:/join");
 		} else {
 			// 회원가입 성공시 로그인 페이지로 이동
+<<<<<<< HEAD
 			mav.setViewName("redirect:/login");
 		} // if ends : 회원가입 여부 확인
 		
@@ -262,3 +290,13 @@ public class UserCont {
 	} // mypay() end
 	
 } // class end
+=======
+			mav.setViewName("login/login");
+		} // if ends : 회원가입 여부 확인
+		
+		return mav;
+	} // join() ends
+
+	
+} // class ends 
+>>>>>>> 59114d0c28a67bc88e76599c07e67d66141c0961

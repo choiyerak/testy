@@ -14,15 +14,6 @@
     z-index: 99;
 }
 
-.bu {
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
 
 /* 2. Billboard
 /*----------------------------------------------*/
@@ -523,9 +514,76 @@
     border-right: none;
 }
 
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+#login {
+	width: 50%;
+	margin: 4rem auto;
+	padding: 1rem;
+	border: 1px solid #00b98e;
+}
+
+.login-text{
+	text-align: center;
+	vertical-align: middle;
+}
+
+.login-textbox{
+	border: 1px solid #00b98e;
+	width: 95%;
+}
+
+.user-list {
+	width: 75%;
+	margin: 2rem auto;
+}
+
+.admin-userlist-search{
+
+	margin: 20px auto;
+	
+}
+
+.fi-br-search{
+	font-size: 16px;
+	line-height: 16px;
+}
+
+.search-box> input[type="text"]{
+	
+}
+
+.search-box> input[type="text"]:focus{
+	
+}
+
+/* 해당 페이지에서 커서 사용 안됨 : https://stackoverflow.com/questions/43492742/how-to-use-the-disabled-attribute-for-a-a-tag-in-html*/
+.disabled {
+	pointer-events: none;
+	cursor: default;
+}
+.page-list {
+	margin : 10px auto;
+}
+/* 관리자 공간 */
+.admin-area {
+	margin-top: 10px;
+}
+.orderlist {
+	list-style: none;
+}
+
+.order-img {
+	max-width: 200px;
+}
+
+.order-img-wrap{
+	width: 250px;
+}
+>>>>>>> 59114d0c28a67bc88e76599c07e67d66141c0961
