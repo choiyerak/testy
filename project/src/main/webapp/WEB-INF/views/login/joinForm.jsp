@@ -2,36 +2,12 @@
     pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp" %>
 <!-- 본문 시작 template.jsp -->  
-<script>
-	$('#u_id').keyup(function(){
-		let u_id = $('#u_id').val();
-		
-		$.ajax({
-			url:"idCheck",
-			type:"post",
-			data:{u_id:u_id},
-			dataType:'json',
-			success: function(result){
-				if(result == 1){
-					$("#idFeedback").html('이미 사용 중인 아이디입니다');
-					$("#idFeedback").attr('color','red');
-				}else{
-					$("idFeedback").html('사용가능한 아이디입니다');
-					$("#idFeedback").attr('color','blue');
-				}
-			},
-			error:function(){
-				alert("서버요청실패");
-			}
-		}) // ajax end
-	}) // keyup end
-</script>
 
 <div style="height:50px;"></div>
 <div class="text-center">
 	<h3>[ 회원가입 ]</h3>
 															 <!-- join.js -->
-	<form name="memfrm" id="memfrm" method="post" onsubmit="return userCheck()" style="margin:0 auto; width:800px;">
+	<form name="memfrm" method="post" action="join"  onsubmit="return userCheck()" style="margin:0 auto; width:800px;">
 	<hr>
 	<span style="color:red; font-weight: bold; float: right;">* 필수입력</span>
 		<table class="table">
@@ -39,8 +15,9 @@
 		    <th>*아이디</th>
 		    <td style="text-align: left">
 		    	<input type="text" name="u_id" id="u_id" size="15" maxlength="20" >
-		    	<input type="button" name="idCheck" id="idCheck" value="ID중복확인" class="btn btn-primary" onclick="idCheck()"><!-- join.js -->
+		    	<input type="button" id="btn_userid" value="ID중복확인" class="btn btn-primary">
 		    	<br>
+		    	<div id="panel" style="display:none"></div>
 				<div id="idFeedback"></div>
 		    </td>
 		</tr>
@@ -197,6 +174,30 @@
 
 	$("#u_birth").datepicker();
 	</script>
+	
+	<script>
+		$("#btn_userid").click(function () {
+			//alert();
+			
+			//$.post("요청명령어", 전달값, callback함수);
+			$.post("idcheckproc"							//요청명령어
+					,"userid=" + $("#u_id").val().trim()	//전달값(변수=값&변수=값)
+					,responseProc							//콜백함수
+					);	
+						
+		});//click end
+	
+		function responseProc(result) {//result:서버가 응답해준 메세지를 받는 변수
+			//alert(result);
+			$("#panel").empty();
+			$("#panel").html(result);
+			$("#panel").show();
+		
+		}//responseProc end
+		
+		
+	</script>
+	
 
 <!-- 본문 끝 -->
 <%@ include file="../footer.jsp" %>

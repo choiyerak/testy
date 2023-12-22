@@ -6,7 +6,7 @@
 	<div style="height: 100px;"></div> <!-- 여기서 20px는 필요한 만큼 조절하십시오. -->
 
 	<div class="text-center">
-    <h2>수강 시청 페이지</h2>
+    <h2>수강 신청 페이지</h2>
     <div style="height: 100px;"></div> <!-- 여기서 20px는 필요한 만큼 조절하십시오. -->
     <!-- 검색 시작 -->
     <div class="container-fluid bg-primary mb-5 wow fadeIn" data-wow-delay="0.1s" style="padding: 35px;">

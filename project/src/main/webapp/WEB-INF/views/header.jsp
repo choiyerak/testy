@@ -1,7 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core"      prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt"       prefix="fmt" %>
+
 <html lang="en">
+
+
+
 
 <head>
     <meta charset="utf-8">
@@ -36,7 +44,6 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-<<<<<<< HEAD
     
     <!-- datepicker -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
@@ -45,9 +52,10 @@
     
     <script src="js/modernizer.js"></script>
     
-    <!-- <script src="../js/jquery.cookie.js"></script> -->
-=======
->>>>>>> 9fae9e9ab730455853113bd4f26cad78c47a0e0a
+    <script src="../js/jquery.cookie.js"></script>
+
+
+
 </head>
 <script src="js/modernizer.js"></script>
 <body>
@@ -81,7 +89,7 @@
                             <div class="dropdown-menu rounded-0 m-0">
                                 <a href="center" class="dropdown-item">센터소개</a>
                                 <a href="property-type.html" class="dropdown-item">시설소개</a>
-                                <a href="property-agent.html" class="dropdown-item">강사소개</a>
+                                <a href="teacher" class="dropdown-item">강사소개</a>
                                 <a href="property-agent.html" class="dropdown-item">찾아오는 길</a>
                             </div>
                         </div>
@@ -90,16 +98,25 @@
                             <div class="dropdown-menu rounded-0 m-0">
                             	<a href="testimonial.html" class="dropdown-item">수강 개설</a><!-- 강사만 접근 가능  -->
                                 <a href="testimonial.html" class="dropdown-item">수강 목록</a>
-                                <a href="404.html" class="dropdown-item">수강 신청</a>
+                                <a href="sugang" class="dropdown-item">수강 신청</a>
                             </div>
                         </div>
                         <a href="contact.html" class="nav-item nav-link">커뮤니티</a>
                         <a href="contact.html" class="nav-item nav-link">마이페이지</a>
                     </div>
-                    <a href="" class="btn btn-primary px-3 d-none d-lg-flex">로그인</a>
+                    <c:if test="${s_id != null}">
+				    	<a href="login" class="btn btn-primary px-3 d-none d-lg-flex">로그아웃</a>
+				    </c:if>
+				    <c:if test="${s_id == null}">
+				    	<a href="login" class="btn btn-primary px-3 d-none d-lg-flex">로그인</a>
+					</c:if>
                 </div>
             </nav>
         </div>
+        
+        
+        
+
         <!-- Navbar End -->
         <!-- 템플릿 헤더 시작 -->
         <div class="content">
